@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">ShopEase</div>
+      <div class="nav-links">
+        <button onclick="scrollToSection('home')">Home</button>
+        <button onclick="scrollToSection('products')">Products</button>
+        <button onclick="scrollToSection('cart')">Cart (<span id="cart-count">0</span>)</button>
+        <button onclick="scrollToSection('contact')">Contact</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="section-home">
+      <div class="hero-content">
+        <h1>Welcome to very cool clothes!</h1>
+        <p>Find the best products at amazing prices. Shop now and enjoy your shopping experience!</p>
+        <button onclick="scrollToSection('products')" class="cta-button">Shop Now</button>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2>Featured Products</h2>
+      <div class="products-container">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300" alt="Product 1">
+          <div class="product-info">
+            <p>Product 1</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Product 1')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="c:\Users\User\Desktop\download.jpg" alt="Product 2">
+          <div class="product-info">
+            <p>Product 2</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Product 2')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items">
+      </ul>
+      <button class="cta-button" onclick="goBackToShopping()">Go Back to Shopping</button>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions, feel free to reach out!</p>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
