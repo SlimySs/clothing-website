@@ -1,3 +1,7 @@
+body {
+  background-color: #000000;
+  color: #333;
+}
 * {
     margin: 0;
     padding: 0;
@@ -84,6 +88,7 @@
     font-size: 18px;
     border-radius: 25px;
     transition: background-color 0.3s ease;
+    margin-top: 50px;
   }
   
   .cta-button:hover {
@@ -194,4 +199,98 @@
   
   form button:hover {
     background-color: #45a049;
+  }
+  #product-carousel {
+    margin: 50px 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  #product-carousel h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    gap: 30px;
+    animation: scroll-left linear infinite;
+    align-items: center;
+  }
+  
+  .carousel-item {
+    min-width: 250px;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel-item:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .carousel-item p {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .carousel-item button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .carousel-item button:hover {
+    background-color: #555;
+  }
+  
+  #cart {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 250px;
+    padding: 15px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  #cart h2 {
+    margin-top: 0;
+  }
+  
+  #cart ul {
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  #cart p {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
   }
