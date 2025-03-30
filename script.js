@@ -1,9 +1,20 @@
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({
+      top: section.offsetTop - 50, // Adjust offset for header if needed
+      behavior: 'smooth'
+    });
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".nav-links button").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const sectionId = e.target.getAttribute("onclick").match(/'([^']+)'/)[1]; // Extract section ID
+      scrollToSection(sectionId);
+    });
+  });
+});
 
 let cart = {}; 
 let cartTotal = 0;
